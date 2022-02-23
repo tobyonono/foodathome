@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './fonts/Helvetica-Neue-Font/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.ttf';
+import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Regular.otf';
+
 
 ReactDOM.render(
   <React.StrictMode>

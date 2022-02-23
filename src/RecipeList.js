@@ -1,0 +1,21 @@
+import React from 'react';
+import SingleRecipe from './SingleRecipe';
+import './Recipe.css';
+
+const RecipeList = ({recipes}) => {
+    //const [id, title, image, missedIngredients] = recipes;
+    const recipeCard = recipes.map((recipe, i) =>{
+        return <SingleRecipe key={recipe.id} id ={recipe.id} title={recipe.title} image={recipe.image} 
+        missedIngredients={recipe.missedIngredients} />
+    });
+   
+
+    return(
+        <ul className="recipeList">
+           {recipeCard}   
+        </ul>
+    )
+
+}
+
+export default RecipeList;

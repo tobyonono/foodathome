@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face{
+  font-family: "Helvetica Neue Medium";
+  src:local("Helvetica Neue Medium"),
+  url("./fonts/Helvetica-Neue-Font/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.ttf")
+}
+
+@font-face{
+  font-family: "Founders Grotesk";
+  font-style:normal;
+  src:local("Founders Grotesk"),
+  url("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Regular.otf")
+}

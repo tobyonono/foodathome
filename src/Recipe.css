@@ -1,0 +1,81 @@
+.recipeList{
+    list-style-type: none;
+    padding:0;
+    max-width:1600px;
+    width:100%;
+    margin:0 auto;
+    border-bottom: 1px solid white;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    font-size: 0.4em;
+
+}
+
+.recipeCard{
+    border-bottom: none;
+    border-right:1px solid white;
+    width:33;
+}
+
+.recipeInfo{
+    display: block;
+    height: 100%;
+    padding: 40px;
+}
+
+.image{
+    height:100%;
+}
+
+.image img{
+    width:100%;
+    
+}
+
+.contentWrapper{
+    display:flex;
+    flex-flow: column;
+}
+
+.title{
+    padding:40px;
+}
+
+.title h1{
+    margin:0;
+    text-transform: uppercase;
+    text-align: left;
+    
+}
+
+.react-tag-input__input {
+    background: white;
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 2px;
+    color: black;
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-body-bold);
+    line-height: 1;
+    padding: 18.5px 40px 18.5px 0;
+    width: 60%;
+}
+.react-tag-input {
+    box-sizing: border-box;
+    position: relative;
+    width: 80%;
+    height: auto;
+    min-height: 2.375em;
+    padding: 0.1875em 0.375em;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+}
+
