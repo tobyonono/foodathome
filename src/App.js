@@ -72,7 +72,7 @@ function App() {
         <SectionTitle titleText="Cooking Club" />
       </div>   
       <ReactTagInput tags={ingredients}
-          onChange={onIngredientChange} />     
+          onChange={onIngredientChange} placeholder="Enter Something Food Related" />     
       </header>
       
       <button onClick={getRecipes}>Submit</button>
