@@ -5,8 +5,8 @@ import './Recipe.css';
 const RecipeList = ({recipes}) => {
     //const [id, title, image, missedIngredients] = recipes;
     const recipeCard = recipes.map((recipe, i) =>{
-        return <SingleRecipe key={recipe.id} id ={recipe.id} title={recipe.title} image={recipe.image} 
-        missedIngredients={recipe.missedIngredients} />
+        return <SingleRecipe key={recipe.id} id ={recipe.id} title={recipe.name} image={recipe.thumbnail_url} 
+        recipeDescription={recipe.description} author={recipe.show.name} />
     });
    
 

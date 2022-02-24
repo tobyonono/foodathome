@@ -21,7 +21,8 @@ function App() {
   async function getRecipes() {
 
     const encodedIngredients = encodeURI(ingredients);
-    const response = await axios.get('https://api.spoonacular.com/recipes/findByIngredients?apiKey=a86514be38c1456eaad9120f13738be6',
+    
+    /*const response = await axios.get('https://api.spoonacular.com/recipes/findByIngredients?apiKey=a86514be38c1456eaad9120f13738be6',
       {
         params: { ingredients: encodedIngredients, number: 9 }
       }).catch(error => {
@@ -29,7 +30,25 @@ function App() {
       });
 
     setRecipeData(response.data);
-    console.log(recipeData);
+  */
+
+    const options = {
+      method: 'GET',
+      url: 'https://tasty.p.rapidapi.com/recipes/list',
+      params: {from: '0', size: '30', q: encodedIngredients},
+      headers: {
+        'x-rapidapi-host': 'tasty.p.rapidapi.com',
+        'x-rapidapi-key': '59d95a67b7mshe28714ca6a4a57fp18e490jsna77fcc183e2b'
+      }
+    };
+
+    const apiData = await axios.request(options).catch(error => {
+      console.error(error);
+    });
+    
+    console.log(apiData.data.results);
+    setRecipeData(apiData.data.results);
+    
 
 
   }
@@ -46,16 +65,20 @@ function App() {
     <div className="App">
       <header className="topBar">
         <ReactTagInput tags={ingredients}
-          onChange={onIngredientChange} />
-        <SubmitButton />
+          onChange={onIngredientChange}>
+            
+          </ReactTagInput>
+          <SubmitButton />
+        
       </header>
       <button onClick={getRecipes}>Submit</button>
       <div className='title'>
         <SectionTitle titleText="Meals" />
         <SectionTitle titleText="For You" />
+        <hr />
       </div>
 
-      <div className="CardWrapper">
+      <div className="cardWrapper">
         {recipeData && <RecipeList recipes={recipeData} />}
       </div>
     </div>

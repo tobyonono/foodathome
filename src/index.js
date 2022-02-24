@@ -5,6 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/Helvetica-Neue-Font/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.ttf';
 import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Regular.otf';
+import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Bold.otf';
+import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Condensed/TestFoundersGroteskCondensed-Regular.otf';
+import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Mono/TestFoundersGroteskMono-Regular.otf';
+import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Text/TestFoundersGroteskText-Regular.otf'
+
 
 
 ReactDOM.render(

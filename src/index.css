@@ -24,3 +24,34 @@ code {
   src:local("Founders Grotesk"),
   url("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Regular.otf")
 }
+
+
+@font-face{
+  font-family:"Founders Grotesk";
+  font-style:bold;
+  src:local("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Bold.otf"),
+  url("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Bold.otf");
+}
+
+
+@font-face{
+  font-family:"Founders Grotesk Condensed";
+  font-style:normal;
+  src:local("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Condensed/TestFoundersGroteskCondensed-Regular.otf"),
+  url("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Condensed/TestFoundersGroteskCondensed-Regular.otf");
+}
+
+@font-face{
+  font-family:"Founders Grotesk Mono";
+  font-style:normal;
+  src:local("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Mono/TestFoundersGroteskMono-Regular.otf"),
+  url("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Mono/TestFoundersGroteskMono-Regular.otf");
+}
+
+@font-face{
+  font-family:"Founders Grotesk Text";
+  font-style:normal;
+  src:local("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Text/TestFoundersGroteskText-Regular.otf"),
+  url("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Text/TestFoundersGroteskText-Regular.otf");
+}
+
