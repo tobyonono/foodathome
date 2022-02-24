@@ -55,3 +55,12 @@ code {
   url("./fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Text/TestFoundersGroteskText-Regular.otf");
 }
 
+@font-face{
+  font-family:"Geograph";
+  font-style:normal;
+  src:local("./fonts/Test desktop fonts (OTF)/Test Geograph/TestGeograph-Regular.otf"),
+  url("./fonts/Test desktop fonts (OTF)/Test Geograph/TestGeograph-Regular.otf");
+}
+
+
+

@@ -13,6 +13,7 @@ import SubmitButton from './SubmitButton';
 function App() {
   const [recipeData, setRecipeData] = useState(null);
   const [ingredients, setIngredients] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   function onIngredientChange(newIngredients) {
     setIngredients(newIngredients);
@@ -71,9 +72,7 @@ function App() {
         <SectionTitle titleText="Cooking Club" />
       </div>   
       <ReactTagInput tags={ingredients}
-          onChange={onIngredientChange} />  
-          
-          
+          onChange={onIngredientChange} />     
       </header>
       
       <button onClick={getRecipes}>Submit</button>

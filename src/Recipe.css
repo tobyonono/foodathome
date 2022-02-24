@@ -27,6 +27,7 @@
     display: block;
     height: 100%;
     padding: 40px;
+    max-height:200px;
 }
 
 .image{
@@ -80,9 +81,9 @@ img{
 }
 
 .recipeDescription{
-    font-size:16px;
+    font-size:14px;
     text-align: left;
-    font-family: 'Founders Grotesk Text';
+    font-family: 'Geograph';
 }
 
 
@@ -136,24 +137,30 @@ img{
     line-height: 1;
     padding: 18.5px 40px 18.5px 0;
     width: 60%;
+    font-family: 'Founders Grotesk';
 }
+
 .react-tag-input {
-    box-sizing: border-box;
     position: relative;
     width: 75%;
-    height: auto;
-    min-height: 2.375em;
+    /* height: auto; */
+    max-height: 1.375em;
     padding: 0.1875em 0.375em;
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     font-size: 1rem;
-    background: black;
+    background: #000;
     color: #333;
-    border:none;
+    border: none;
     border-bottom: 1px solid #e1e1e1;
     border-radius: 3px;
-    margin:0 auto;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: 'Founders Grotesk';
+    margin: auto 0;
+    margin-bottom: 0;
 }
+
 
