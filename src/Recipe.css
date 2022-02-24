@@ -53,9 +53,16 @@ img{
      
 }
 
+.topBar{
+    display: flex;
+    padding:40px;
+}
+
 
 .title{
     padding:40px;
+    padding-bottom:0;
+    flex:1;
 }
 
 .title h1{
@@ -78,7 +85,8 @@ img{
     font-family: 'Founders Grotesk Text';
 }
 
-.author, .category, .getMore{
+
+.author, .category{
     font-family:'Source Code Pro';
     font-size:11px;
     text-transform: uppercase;
@@ -89,7 +97,10 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 11px;
 }
+
+
 .author{
     display:inline;
 }
@@ -103,9 +114,18 @@ img{
     display:inline;
     text-decoration: underline;
     color:white;
+    font-family:'Source Code Pro';
+ 
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.getMore h5{
+    height:100%;
 }
 
 .react-tag-input__input {
+    flex:1;
     background: black;
     border: none;
     border-bottom: 1px solid #000;
@@ -120,7 +140,7 @@ img{
 .react-tag-input {
     box-sizing: border-box;
     position: relative;
-    width: 80%;
+    width: 75%;
     height: auto;
     min-height: 2.375em;
     padding: 0.1875em 0.375em;

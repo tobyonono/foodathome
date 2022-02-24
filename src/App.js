@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactTagInput from "@pathofdev/react-tag-input";
 import "@pathofdev/react-tag-input/build/index.css";
@@ -38,7 +38,7 @@ function App() {
       params: {from: '0', size: '30', q: encodedIngredients},
       headers: {
         'x-rapidapi-host': 'tasty.p.rapidapi.com',
-        'x-rapidapi-key': '59d95a67b7mshe28714ca6a4a57fp18e490jsna77fcc183e2b'
+        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
       }
     };
 
@@ -53,6 +53,8 @@ function App() {
 
   }
 
+  
+
   async function getRecipeInstructions() {
 
   }
@@ -64,19 +66,18 @@ function App() {
   return (
     <div className="App">
       <header className="topBar">
-        <ReactTagInput tags={ingredients}
-          onChange={onIngredientChange}>
-            
-          </ReactTagInput>
-          <SubmitButton />
-        
-      </header>
-      <button onClick={getRecipes}>Submit</button>
       <div className='title'>
-        <SectionTitle titleText="Meals" />
-        <SectionTitle titleText="For You" />
-        <hr />
-      </div>
+        <SectionTitle titleText="Bitter Cassava" />
+        <SectionTitle titleText="Cooking Club" />
+      </div>   
+      <ReactTagInput tags={ingredients}
+          onChange={onIngredientChange} />  
+          
+          
+      </header>
+      
+      <button onClick={getRecipes}>Submit</button>
+      
 
       <div className="cardWrapper">
         {recipeData && <RecipeList recipes={recipeData} />}
