@@ -9,7 +9,7 @@ import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test F
 import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Condensed/TestFoundersGroteskCondensed-Regular.otf';
 import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Mono/TestFoundersGroteskMono-Regular.otf';
 import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Text/TestFoundersGroteskText-Regular.otf'
-
+import './fonts/Test desktop fonts (OTF)/Test Geograph/TestGeograph-Regular.otf'
 
 
 ReactDOM.render(
