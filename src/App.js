@@ -10,6 +10,8 @@ import RecipePage from './RecipePage';
 import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import {useParams} from 'react-router-dom';
+
 
 
 
@@ -18,7 +20,11 @@ import { Link } from "react-router-dom";
 
 function App() {
 
-  const [recipeID, setRecipeID] = useState(null);
+  const [test, setRecipeID] = useState(null);
+  const params = useParams();
+  const recipeID = params.ID;
+
+  console.log(recipeID, params, 'params');
 
   
 
@@ -29,7 +35,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home setRecipeID={setRecipeID} />} />
-          <Route path='recipes/:recipeSlug' element={<RecipePage recipeID={recipeID}  />} />
+          <Route path='recipes/:id/:recipeSlug' element={<RecipePage />} />
 
         </Routes>
       </Router>

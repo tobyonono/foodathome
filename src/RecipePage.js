@@ -6,12 +6,13 @@ import SectionTitle from './SectionTitle';
 
 
 
-const RecipePage = ({ recipeID }) => {
+const RecipePage = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
     const params = useParams();
     const recipeSlug = params.recipeSlug;
+    const recipeID = params.id;
 
     useEffect(() => {
 
@@ -39,10 +40,6 @@ const RecipePage = ({ recipeID }) => {
 
    const {name, country, slug} = data;
    
-
-    
-    
-
     return (
         /*
         <>

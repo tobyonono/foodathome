@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const SingleRecipe = ({ id, title, image, recipeDescription, author, setRecipeID}) => {
 
-    console.log(id);
 
     return (
         <li className='recipeCard' key={id} id={id}>
@@ -19,7 +18,7 @@ const SingleRecipe = ({ id, title, image, recipeDescription, author, setRecipeID
                     <p className="recipeDescription">{recipeDescription}</p>
                     <div className="bottom">
                         <h5 className="author">{author} • 23-12-99</h5>
-                        <Link to={`recipes/${title}`}  onClick={setRecipeID(id)}>
+                        <Link to={`recipes/${id}/${title}`} >
                             <h5 className="getMore">Full Recipe → </h5>
                         </Link>
 
