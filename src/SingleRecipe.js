@@ -3,7 +3,7 @@ import './Recipe.css';
 import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 
-const SingleRecipe = ({ id, title, image, recipeDescription, author, setRecipeID}) => {
+const SingleRecipe = ({ id, title, image, recipeDescription, author}) => {
 
 
     return (

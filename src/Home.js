@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Home = ({ setRecipeID }) => {
+const Home = () => {
     const [recipeData, setRecipeData] = useState(null);
     const [ingredients, setIngredients] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -72,7 +72,7 @@ const Home = ({ setRecipeID }) => {
             <button onClick={getRecipes}>Submit</button>
 
             <div className="cardWrapper">
-                {recipeData && <RecipeList recipes={recipeData} setRecipeID={setRecipeID} />}
+                {recipeData && <RecipeList recipes={recipeData} />}
             </div>
         </>
 

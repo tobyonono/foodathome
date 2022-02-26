@@ -20,11 +20,7 @@ import {useParams} from 'react-router-dom';
 
 function App() {
 
-  const [test, setRecipeID] = useState(null);
-  const params = useParams();
-  const recipeID = params.ID;
-
-  console.log(recipeID, params, 'params');
+  
 
   
 
@@ -34,7 +30,7 @@ function App() {
       
       <Router>
         <Routes>
-          <Route path='/' element={<Home setRecipeID={setRecipeID} />} />
+          <Route path='/' element={<Home />} />
           <Route path='recipes/:id/:recipeSlug' element={<RecipePage />} />
 
         </Routes>
