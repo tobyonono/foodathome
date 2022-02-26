@@ -1,9 +1,14 @@
 import React from 'react';
 import './Recipe.css';
+import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const SingleRecipe = ({ id, title, image, recipeDescription, author }) => {
+const SingleRecipe = ({ id, title, image, recipeDescription, author, setRecipeID}) => {
+
+    console.log(id);
+
     return (
-        <li className='recipeCard'>
+        <li className='recipeCard' key={id} id={id}>
             <div className="contentWrapper">
                 <div className="image">
                     <img src={image} alt="recipe" />
@@ -14,7 +19,10 @@ const SingleRecipe = ({ id, title, image, recipeDescription, author }) => {
                     <p className="recipeDescription">{recipeDescription}</p>
                     <div className="bottom">
                         <h5 className="author">{author} • 23-12-99</h5>
-                        <a href="#" className="getMore"><h5 >Full Recipe → </h5></a>
+                        <Link to={`recipes/${title}`}  onClick={setRecipeID(id)}>
+                            <h5 className="getMore">Full Recipe → </h5>
+                        </Link>
+
                     </div>
                 </div>
             </div>

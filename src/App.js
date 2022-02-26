@@ -6,82 +6,38 @@ import "@pathofdev/react-tag-input/build/index.css";
 import SectionTitle from './SectionTitle';
 import RecipeList from './RecipeList';
 import SubmitButton from './SubmitButton';
+import RecipePage from './RecipePage';
+import Home from './Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
+
 
 
 
 
 function App() {
-  const [recipeData, setRecipeData] = useState(null);
-  const [ingredients, setIngredients] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  function onIngredientChange(newIngredients) {
-    setIngredients(newIngredients);
-  }
-
-  async function getRecipes() {
-
-    const encodedIngredients = encodeURI(ingredients);
-    
-    /*const response = await axios.get('https://api.spoonacular.com/recipes/findByIngredients?apiKey=a86514be38c1456eaad9120f13738be6',
-      {
-        params: { ingredients: encodedIngredients, number: 9 }
-      }).catch(error => {
-        console.error(error);
-      });
-
-    setRecipeData(response.data);
-  */
-
-    const options = {
-      method: 'GET',
-      url: 'https://tasty.p.rapidapi.com/recipes/list',
-      params: {from: '0', size: '30', q: encodedIngredients},
-      headers: {
-        'x-rapidapi-host': 'tasty.p.rapidapi.com',
-        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
-      }
-    };
-
-    const apiData = await axios.request(options).catch(error => {
-      console.error(error);
-    });
-    
-    console.log(apiData.data.results);
-    setRecipeData(apiData.data.results);
-    
-
-
-  }
+  const [recipeID, setRecipeID] = useState(null);
 
   
-
-  async function getRecipeInstructions() {
-
-  }
-
-
-
 
 
   return (
     <div className="App">
-      <header className="topBar">
-      <div className='title'>
-        <SectionTitle titleText="Bitter Cassava" />
-        <SectionTitle titleText="Cooking Club" />
-      </div>   
-      <ReactTagInput tags={ingredients}
-          onChange={onIngredientChange} placeholder="Enter Something Food Related" />     
-      </header>
       
-      <button onClick={getRecipes}>Submit</button>
-      
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home setRecipeID={setRecipeID} />} />
+          <Route path='recipes/:recipeSlug' element={<RecipePage recipeID={recipeID}  />} />
 
-      <div className="cardWrapper">
-        {recipeData && <RecipeList recipes={recipeData} />}
-      </div>
+        </Routes>
+      </Router>
+
+
     </div>
+
+
   );
 }
 

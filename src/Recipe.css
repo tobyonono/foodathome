@@ -59,6 +59,11 @@ img{
     padding:40px;
 }
 
+.normal{
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .title{
     padding:40px;
@@ -81,7 +86,7 @@ img{
 }
 
 .recipeDescription{
-    font-size:14px;
+    font-size:12px;
     text-align: left;
     font-family: 'Geograph';
 }
