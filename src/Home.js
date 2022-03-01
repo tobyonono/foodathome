@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactTagInput from "@pathofdev/react-tag-input";
 import "@pathofdev/react-tag-input/build/index.css";
-import SectionTitle from './SectionTitle';
-import RecipeList from './RecipeList';
-import SubmitButton from './SubmitButton';
+import SectionTitle from './components/SectionTitle';
+import RecipeList from './components/RecipeList';
+import SubmitButton from './components/SubmitButton';
 import RecipePage from './RecipePage';
 import { Link } from "react-router-dom";
 

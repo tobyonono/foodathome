@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleRecipe from './SingleRecipe';
-import './Recipe.css';
+import '../Recipe.css';
 
 const RecipeList = ({recipes}) => {
     //const [id, title, image, missedIngredients] = recipes;

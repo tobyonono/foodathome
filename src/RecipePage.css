@@ -1,0 +1,33 @@
+.recipePageBody {
+    background-color: white;
+    color: black;
+    height: 100%;
+}
+
+.recipePageContentGrid{
+    font-family: 'Lora', serif;
+    text-align:left;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:0;
+    padding: 40px 40px 0;
+
+}
+
+ul.instructionList {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding:0;
+}
+
+.recipeImage{
+    max-width:640px;
+    margin-bottom:30px;
+}
+
+.recipeImage img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Recipe.css';
+import '../Recipe.css';
 import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const SingleRecipe = ({ id, title, image, recipeDescription, author}) => {
     return (
         <li className='recipeCard' key={id} id={id}>
             <div className="contentWrapper">
-                <div className="image">
+                <div className="homeImage">
                     <img src={image} alt="recipe" />
                 </div>
                 <div className='recipeInfo'>

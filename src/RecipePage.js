@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from "axios";
-import {useParams} from 'react-router-dom';
-import SectionTitle from './SectionTitle';
+import { useParams } from 'react-router-dom';
+import SectionTitle from './components/SectionTitle';
+import RecipeInstructions from './components/RecipeInstructions';
+import RecipeIngredients from './components/RecipeIngredients.js';
+import './RecipePage.css';
+
 
 
 
 const RecipePage = () => {
 
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [data, setData] = useState([]);
     const params = useParams();
     const recipeSlug = params.recipeSlug;
     const recipeID = params.id;
 
     useEffect(() => {
-
+        setIsLoading(true);
         const options = {
             method: 'GET',
             url: 'https://tasty.p.rapidapi.com/recipes/detail',
@@ -23,7 +27,7 @@ const RecipePage = () => {
             headers: {
                 'x-rapidapi-host': 'tasty.p.rapidapi.com',
                 'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
-            } 
+            }
         };
 
         const fetchData = async () => {
@@ -31,36 +35,27 @@ const RecipePage = () => {
             setData(recipeInstructions.data);
             console.log(recipeInstructions.data);
             console.log(data);
-            
         }
-
         fetchData().catch(console.error);
+        setIsLoading(false);
 
-    }, [recipeID]);
+    }, []);
 
-   const {name, country, slug} = data;
-   
+    const { name, country, slug, instructions, thumbnail_url, sections } = data;
+
+    console.log(data.instructions);
+    console.log(name);
+
+    if (isLoading) {
+        return (
+            <div> here dispolay a gif loading </div>
+        )
+    };
+
     return (
-        /*
-        <>
-            {!isLoading && (
-                <>
-                    <div className="contentWrapper">
-                        <div className='recipeInfo'>
-                            <h3 className="category">Food</h3>
-                            <h1 className="recipeTitle">{title}</h1>
-                            <p className="recipeDescription">{recipeDescription}</p>
-                            <div className="bottom">
-                                <h5 className="author">{author} • 23-12-99</h5>
-                                <a href="#" className="getMore"><h5 >Full Recipe → </h5></a>
-                            </div>
-                        </div>
-                    </div>
-                </>)}
-        </>
-        */
-       <>
-       <header className="topBar">
+
+        <div className='recipePageBody'>
+            <header className="topBar">
                 <Link to={`/`} className='normal'>
                     <div className='title'>
                         <SectionTitle titleText="Bitter Cassava" />
@@ -68,11 +63,39 @@ const RecipePage = () => {
                     </div>
                 </Link>
             </header>
-       <div>{name}</div>
-       <div>{country}</div>
-       <div>{slug}</div>
-       <div>slug: {recipeSlug}</div></>
-       )
+            <div className='recipePageContentGrid'>
+                <div className='ingredientsAndInstructions'>
+                    <div>
+                        <h3>{name}</h3>
+                        <div className="recipeImage">
+                            <img src={thumbnail_url} alt="recipe" />
+                        </div>
+                    </div>
+                    <section>
+                        <p>Serves {data.num_servings} </p>
+                        <p>Prep Time {data.num_servings} </p>
+                    </section>
+                    <section>
+                        <h4>Ingredients</h4>
+                        {sections && <RecipeIngredients ingredients={sections} />}
+
+                    </section>
+                    <div>{country}</div>
+                    <div>{slug}</div>
+                    <section>
+                        <h4>Directions</h4>
+                        {instructions && <RecipeInstructions instructions={instructions} />}
+                    </section>
+
+                </div>
+                <div className='moreAndPlaylist'></div>
+            </div>
+
+
+
+
+        </div>
+    )
 
 }
 
