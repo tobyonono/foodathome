@@ -4,8 +4,8 @@ const RecipeIngredients = ({ ingredients }) => {
 
     const ingredientList = ingredients.map((section, i) => {
         return (
-            <div>
-                <h4>{section.name}</h4>           
+            <div key={i}>
+                {section.name &&<h4><i>for the {section.name}</i></h4>}          
                 <ul className = "instructionList">
                     {section.components.map((sectionIngredient, i) => <li>{sectionIngredient.raw_text}</li>)}
                 </ul>

@@ -8,6 +8,7 @@ import RecipeList from './components/RecipeList';
 import SubmitButton from './components/SubmitButton';
 import RecipePage from './RecipePage';
 import { Link } from "react-router-dom";
+import {Search} from './icons/svg/svgs.js';
 
 
 
@@ -34,7 +35,7 @@ const Home = () => {
             params: { from: '0', size: '30', q: encodedIngredients },
             headers: {
                 'x-rapidapi-host': 'tasty.p.rapidapi.com',
-                'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
+                'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY2
             }
         };
 
@@ -68,8 +69,9 @@ const Home = () => {
                 </Link>
                 <ReactTagInput tags={ingredients}
                     onChange={onIngredientChange} placeholder="Enter Something Food Related" />
+                    <button className='searchButton' onClick={getRecipes}><Search /></button>
             </header>
-            <button onClick={getRecipes}>Submit</button>
+            
 
             <div className="cardWrapper">
                 {recipeData && <RecipeList recipes={recipeData} />}

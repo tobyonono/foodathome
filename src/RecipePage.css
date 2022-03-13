@@ -4,6 +4,61 @@
     height: 100%;
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
+
+.socialWrapper{
+    padding:1em;
+}
+
+section{
+    border-top: 1px solid lightgrey;
+    margin: 3em;
+    margin-left: 0;
+}
+
+.socialButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.socialButton:hover{
+    opacity:.5;
+}
+
+.socialIcons{
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.socialIcons li{
+    display: inline-block;
+    margin-right:1em;
+}
+
+.socialIcons span{
+    margin-left: 5px;
+    text-decoration: underline;
+    font-size:13px;
+    display:inline-block;
+}
+
+.recipePageHeader{
+    border-bottom:2px solid black;
+}
+
+.recipePageTitle{
+    font-size: 3em;
+    font-family: 'Founders Grotesk';
+}
+
 .recipePageContentGrid{
     font-family: 'Lora', serif;
     text-align:left;
@@ -21,6 +76,15 @@ ul.instructionList {
     padding:0;
 }
 
+.ingredientList li{
+    padding: 0.3em;
+}
+
+.directionList li{
+    list-style-type: decimal;
+    padding:0.6em;
+}
+
 .recipeImage{
     max-width:640px;
     margin-bottom:30px;
@@ -30,4 +94,14 @@ ul.instructionList {
     height: 100%;
     object-fit: cover;
     width: 100%;
+}
+
+.recipePageImage {
+    height: 360px;
+    margin-bottom: 30px;
+}
+
+.recipePageImage img{
+    height: 100%;
+    width: auto;
 }

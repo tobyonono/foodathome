@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
+import ShareSocials from './components/ShareSocials';
 import SectionTitle from './components/SectionTitle';
 import RecipeInstructions from './components/RecipeInstructions';
 import RecipeIngredients from './components/RecipeIngredients.js';
@@ -26,7 +27,7 @@ const RecipePage = () => {
             params: { id: recipeID },
             headers: {
                 'x-rapidapi-host': 'tasty.p.rapidapi.com',
-                'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
+                'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY2
             }
         };
 
@@ -55,7 +56,7 @@ const RecipePage = () => {
     return (
 
         <div className='recipePageBody'>
-            <header className="topBar">
+            <header className="topBar recipePageHeader">
                 <Link to={`/`} className='normal'>
                     <div className='title'>
                         <SectionTitle titleText="Bitter Cassava" />
@@ -66,24 +67,25 @@ const RecipePage = () => {
             <div className='recipePageContentGrid'>
                 <div className='ingredientsAndInstructions'>
                     <div>
-                        <h3>{name}</h3>
-                        <div className="recipeImage">
+                        <h1 className="recipePageTitle">{name}</h1>
+                        <ShareSocials />
+                        <div className="recipePageImage">
                             <img src={thumbnail_url} alt="recipe" />
                         </div>
                     </div>
                     <section>
-                        <p>Serves {data.num_servings} </p>
-                        <p>Prep Time {data.num_servings} </p>
+                        {data.num_servings && <p><strong><i>Serves:</i></strong> {data.num_servings} </p>}
+                        {data.prep_time_minutes &&<p><strong><i>Prep Time:</i></strong> {data.prep_time_minutes} minutes </p>}
+                        {data.cook_time_minutes &&<p><strong><i>Cooking Time:</i></strong> {data.cook_time_minutes} minutes </p>}
+
                     </section>
                     <section>
-                        <h4>Ingredients</h4>
+                        <h4 className="uppercase">Ingredients</h4>
                         {sections && <RecipeIngredients ingredients={sections} />}
 
                     </section>
-                    <div>{country}</div>
-                    <div>{slug}</div>
                     <section>
-                        <h4>Directions</h4>
+                        <h4 className="uppercase">Directions</h4>
                         {instructions && <RecipeInstructions instructions={instructions} />}
                     </section>
 

@@ -7,9 +7,12 @@ const RecipeInstructions = ({instructions}) => {
     });
 
     return(
-        <ul className="instructionList">
+        <div className ="directions">
+            <ul className="directionList">
            {instructionList}   
         </ul>
+        </div>
+        
     )
 
 }
