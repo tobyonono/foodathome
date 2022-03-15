@@ -1,0 +1,60 @@
+.moreAndPlaylist{
+    border-left:1px solid lightgray;
+}
+
+.sideBarRecipe{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left:2.5em;
+}
+
+.sideBarWrapper{
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 2em 0;
+    border-bottom: solid 1px rgba(0,0,0,.1);
+}
+
+.sideBarTitle{
+    font-size:2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Founders Grotesk';
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1em;
+    margin-top: 0;
+}
+
+.sideBarTitle h2{
+    margin:0;
+    font-size:1em;
+}
+
+.sideBarRecipeTitle{
+    font-family:'Founders Grotesk';
+}
+
+.playlistHeader{
+    margin-bottom: 1em;
+}
+
+.recipeContent{
+    flex-grow: 1;
+    padding-right: 15px;
+}
+
+.recipeContent a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.sideBarImage{
+    flex-grow: 1;
+    max-width: 80px;
+}
+
+.sideBarImage img{
+    width: 100%;
+}

@@ -6,6 +6,7 @@ import ShareSocials from './components/ShareSocials';
 import SectionTitle from './components/SectionTitle';
 import RecipeInstructions from './components/RecipeInstructions';
 import RecipeIngredients from './components/RecipeIngredients.js';
+import RelatedRecipes from './components/RelatedRecipes.js';
 import './RecipePage.css';
 
 
@@ -90,7 +91,9 @@ const RecipePage = () => {
                     </section>
 
                 </div>
-                <div className='moreAndPlaylist'></div>
+                <div className='moreAndPlaylist'>
+                    <RelatedRecipes recipeID={recipeID}></RelatedRecipes>
+                </div>
             </div>
 
 

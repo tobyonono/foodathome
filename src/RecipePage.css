@@ -57,6 +57,7 @@ section{
 .recipePageTitle{
     font-size: 3em;
     font-family: 'Founders Grotesk';
+    text-transform:uppercase;
 }
 
 .recipePageContentGrid{
