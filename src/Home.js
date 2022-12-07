@@ -69,7 +69,9 @@ const Home = () => {
                     <span className="text-white font-nitti text-4xl uppercase">Featured Reading</span>
                 </div>
                 <ReadingList />
+                <hr className='w-full'/>
             </section>
+            
             <section className='p-20 pb-0 mb-0 border-0'>
                 <div className="flex p-4">
                     {recipeData && <span className="text-white font-nitti text-4xl uppercase">Recipes</span>}
@@ -80,8 +82,6 @@ const Home = () => {
 
             </section>
         </>
-
-
 
     )
 }

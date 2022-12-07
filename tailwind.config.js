@@ -10,7 +10,9 @@ module.exports = {
       fontFamily: {
         'nitti': ['Nitti', 'mono'],
         'spaceGrotesk':['"Space Grotesk"', 'sans'],
-        'GTWalsheim':['GTWalsheimPro', 'sans']
+        'GTWalsheim':['GTWalsheimPro', 'sans'],
+        'guyot': ['Guyot', 'sans'],
+
       },
     },
   },

@@ -10,11 +10,11 @@ const SingleRead = ({ id, name, author, image, description, twitter, instagram }
                 <p className="m-2 text-xs text-white ">{author}</p>
                 <h3 className="mb-6 text-[bisque] text-2xl relative z-10">{name}</h3>
                 <div className="relative z-10 p-5 bg-white shadow-lg border-8 border-solid border-[bisque]">
-                    <p className=" text-black text-left font-spaceGrotesk normal-case">{description}</p>
+                    <p className=" text-black text-left font-guyot normal-case">{description}</p>
                 </div>
                 <ul className="relative flex flex-wrap z-10 mt-6 mb-3 justify-end text-white">
-                    <a href={twitter}><li className="border border-white p-1 m-1 shadow-lg hover:bg-white hover:text-black">Twitter</li> </a>
-                    <a href={instagram}><li className="border border-white p-1 m-1 shadow-lg hover:bg-white hover:text-black">Instagram</li></a>
+                    <a href={twitter}><li className="border border-white p-2 m-1 shadow-lg hover:bg-white hover:text-black rounded-2xl text-xs">Twitter</li> </a>
+                    <a href={instagram}><li className="border border-white p-2 m-1 shadow-lg hover:bg-white hover:text-black rounded-2xl text-xs">Instagram</li></a>
                 </ul>
             </div>
         </div>

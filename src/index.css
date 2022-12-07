@@ -31,6 +31,14 @@ code {
 }
 
 @font-face{
+  font-family: "Guyot";
+  font-weight:400;
+  src:local("Guyot"),
+  url("./fonts/Guyot/GuyotText-Regular.otf")
+}
+
+
+@font-face{
   font-family: "Helvetica Neue Medium";
   src:local("Helvetica Neue Medium"),
   url("./fonts/Helvetica-Neue-Font/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.ttf")
