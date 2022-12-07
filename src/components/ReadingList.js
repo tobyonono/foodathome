@@ -8,7 +8,7 @@ const ReadingList = () => {
     const readCard = StaticReadingList.map((read, i) => {
 
         return <SingleRead2 key={read.id} id={read.id} name={read.name} image={read.img}
-            author={read.author} type={read.type} />
+            author={read.author} description={read.description} twitter={read.twitter} instagram={read.instagram}/>
     });
 
     return (

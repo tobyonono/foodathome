@@ -12,7 +12,7 @@ const RecipeList = ({ recipes }) => {
 
     return (
         <div>
-            <ul className='grid grid-cols-3 gap-4 p-4'>
+            <ul className='grid grid-cols-3 gap-8 p-4'>
                 {recipeCard}
             </ul>
         </div>
