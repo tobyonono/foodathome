@@ -8,6 +8,8 @@ import RecipeInstructions from './components/RecipeInstructions';
 import RecipeIngredients from './components/RecipeIngredients.js';
 import RelatedRecipes from './components/RelatedRecipes.js';
 import './RecipePage.css';
+import {Loader} from './icons/svg/svgs.js';
+
 
 
 
@@ -50,7 +52,7 @@ const RecipePage = () => {
 
     if (isLoading) {
         return (
-            <div> here dispolay a gif loading </div>
+            <div> <Loader /></div>
         )
     };
 

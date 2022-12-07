@@ -7,11 +7,11 @@ import SectionTitle from './components/SectionTitle';
 import RecipeList from './components/RecipeList';
 import SubmitButton from './components/SubmitButton';
 import RecipePage from './RecipePage';
+import ReadingList from './components/ReadingList';
 import { Link } from "react-router-dom";
-import {Search} from './icons/svg/svgs.js';
-
-
-
+import { Search } from './icons/svg/svgs.js';
+import { Search2 } from './icons/svg/svgs.js';
+import { Loader } from './icons/svg/svgs.js';
 
 
 
@@ -27,8 +27,6 @@ const Home = () => {
     async function getRecipes() {
 
         const encodedIngredients = encodeURI(ingredients);
-
-
         const options = {
             method: 'GET',
             url: 'https://tasty.p.rapidapi.com/recipes/list',
@@ -45,18 +43,12 @@ const Home = () => {
 
         console.log(apiData.data.results);
         setRecipeData(apiData.data.results);
-
     }
-
 
 
     async function getRecipeInstructions() {
 
     }
-
-
-
-
 
     return (
         <>
@@ -67,16 +59,28 @@ const Home = () => {
                         <SectionTitle titleText="Cooking Club" />
                     </div>
                 </Link>
-                <ReactTagInput tags={ingredients}
-                    onChange={onIngredientChange} placeholder="Enter Something Food Related" />
-                    <button className='searchButton' onClick={getRecipes}><Search /></button>
-            </header>
-            
 
-            <div className="cardWrapper">
-                {recipeData && <RecipeList recipes={recipeData} />}
-            </div>
+                <ReactTagInput tags={ingredients}
+                    onChange={onIngredientChange} placeholder="Search Something" />
+                <button className='searchButton hover-search-submit' onClick={getRecipes}><Search2 /></button>
+            </header>
+            <section className='p-20 border-0'>
+                <div className="flex p-4">
+                    <span className="text-white font-nitti text-4xl uppercase">Featured Reading</span>
+                </div>
+                <ReadingList />
+            </section>
+            <section className='p-20 border-0'>
+                <div className="flex p-4">
+                    <span className="text-white font-nitti text-4xl uppercase">Recipes</span>
+                </div>
+                <div>
+                    {recipeData && <RecipeList recipes={recipeData} />}
+                </div>
+
+            </section>
         </>
+
 
 
     )

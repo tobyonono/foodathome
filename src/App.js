@@ -8,12 +8,6 @@ import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-
-
-
-
-
-
 function App() {
 
   return (
@@ -22,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='recipes/:id/:recipeSlug' element={<RecipePage />} />
+          <Route exact path='/recipes/:recipeSlug/:id' element={<RecipePage />} />
         </Routes>
       </Router>
 

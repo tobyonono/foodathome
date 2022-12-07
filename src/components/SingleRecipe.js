@@ -18,7 +18,7 @@ const SingleRecipe = ({ id, title, image, recipeDescription, author}) => {
                     <p className="recipeDescription">{recipeDescription}</p>
                     <div className="bottom">
                         <h5 className="author">{author} • 23-12-99</h5>
-                        <Link to={`recipes/${id}/${title}`} >
+                        <Link to={`recipes/${title}/${id}`} >
                             <h5 className="getMore">Full Recipe → </h5>
                         </Link>
 

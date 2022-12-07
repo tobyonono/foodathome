@@ -12,9 +12,9 @@ const Loader = () => {
                 </defs>
                 <circle cx="100" cy="100" r="50" fill="none" stroke="none"></circle>
                 <g>
-                    <use xlink:href="#circlePath" fill="none"></use>
+                    <use xlinkHref="#circlePath" fill="none"></use>
                     <text fill="red" stroke="#fff">
-                        <textPath xlink:href="#circlePath" fill="#fff">• BITTER • CASSAVA</textPath>
+                        <textPath xlinkHref="#circlePath" fill="#fff">• BITTER • CASSAVA</textPath>
                     </text>
                 </g>
             </svg>

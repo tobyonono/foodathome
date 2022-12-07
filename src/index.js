@@ -8,8 +8,14 @@ import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test F
 import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk/TestFoundersGrotesk-Bold.otf';
 import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Condensed/TestFoundersGroteskCondensed-Regular.otf';
 import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Mono/TestFoundersGroteskMono-Regular.otf';
-import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Text/TestFoundersGroteskText-Regular.otf'
-import './fonts/Test desktop fonts (OTF)/Test Geograph/TestGeograph-Regular.otf'
+import './fonts/Test desktop fonts (OTF)/Test Founders Grotesk Collection/Test Founders Grotesk Text/TestFoundersGroteskText-Regular.otf';
+import './fonts/Test desktop fonts (OTF)/Test Geograph/TestGeograph-Regular.otf';
+import './fonts/Labil Grotesk/LabilGrotesk-Bold.ttf';
+import './fonts/Labil Grotesk/LabilGrotesk-Light.ttf';
+import './fonts/Labil Grotesk/LabilGrotesk-Medium.ttf';
+import './fonts/Labil Grotesk/LabilGrotesk-Regular.ttf';
+import './fonts/Labil Grotesk/LabilGrotesk-Thin.ttf';
+
 
 
 ReactDOM.render(

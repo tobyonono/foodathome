@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,6 +14,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face{
+  font-family: "Nitti";
+  font-weight:400;
+  src:local("Nitti"),
+  url("./fonts/nitti/Nitti-Normal.woff")
+}
+
+@font-face{
+  font-family: "Nitti";
+  font-weight:700;
+  src:local("Nitti Bold"),
+  url("./fonts/nitti/Nitti-Bold.woff")
 }
 
 @font-face{
@@ -61,6 +79,43 @@ code {
   src:local("./fonts/Test desktop fonts (OTF)/Test Geograph/TestGeograph-Regular.otf"),
   url("./fonts/Test desktop fonts (OTF)/Test Geograph/TestGeograph-Regular.otf");
 }
+
+@font-face{
+  font-family:"Labil Grotesk Bold";
+  font-style:normal;
+  src:local("./fonts/Labil Grotesk/LabilGrotesk-Bold.ttf"),
+  url("./fonts/Labil Grotesk/LabilGrotesk-Bold.ttf");
+}
+
+@font-face{
+  font-family:"Labil Grotesk Light";
+  font-style:normal;
+  src:local("./fonts/Labil Grotesk/LabilGrotesk-Light.ttf"),
+  url("./fonts/Labil Grotesk/LabilGrotesk-Light.ttf");
+}
+
+@font-face{
+  font-family:"Labil Grotesk Medium";
+  font-style:normal;
+  src:local("./fonts/Labil Grotesk/LabilGrotesk-Medium.ttf"),
+  url("./fonts/Labil Grotesk/LabilGrotesk-Medium.ttf");
+}
+
+@font-face{
+  font-family:"Labil Grotesk Regular";
+  font-style:normal;
+  src:local("./fonts/Labil Grotesk/LabilGrotesk-Regular.ttf"),
+  url("./fonts/Labil Grotesk/LabilGrotesk-Regular.ttf");
+}
+
+@font-face{
+  font-family:"Labil Grotesk Thin";
+  font-style:normal;
+  src:local("./fonts/Labil Grotesk/LabilGrotesk-Thin.ttf"),
+  url("./fonts/Labil Grotesk/LabilGrotesk-Thin.ttf");
+}
+
+
 
 
 

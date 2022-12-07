@@ -18,8 +18,8 @@
 */
 
 .recipeCard{
-    border-bottom: none;
-    border-right:1px solid white;
+        border:2px solid white;
+        margin: 3em;
     
 }
 
@@ -31,16 +31,15 @@
 }
 
 .homeImage{
+    
     width:100%;
-    height:50%;
+    height:50%; 
 }
 
 .homeImage img{
     width:100%;
-    max-height:240px;
-    object-fit: cover;
-    
-    
+    height:240px;
+    object-fit: cover;    
 }
 
 .contentWrapper{
@@ -63,17 +62,42 @@
     background: transparent;
     border:0;
     border-bottom:1px solid #e1e1e1;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.1875em 0.375em;
 }
 .searchButton svg:hover{
-    opacity:0.3;
+    opacity:0.7;
     cursor: pointer;
+
 }
+
+/* searchbutton svg 2*/
+.icon-search {
+    width: 20px;
+    height: 25px;
+    -webkit-filter: hue-rotate(220deg) saturate(5);
+    filter: hue-rotate(220deg) saturate(5);
+}
+.hover-search-submit svg {
+    transform: rotate(0deg) translate(0);
+    transition: transform .38s ease-in-out;
+    transform-origin: center;
+}
+.hover-search-submit:hover svg {
+    transform: rotate(8deg) translate(4px,-1px);
+    -webkit-filter: hue-rotate(220deg) saturate(5);
+    filter: hue-rotate(220deg) saturate(5);
+}
+
+/* end */
 
 .normal{
     text-decoration: none;
     color: inherit;
     width:25%;
 }
+
 
 
 .title{
@@ -100,6 +124,12 @@
     font-size:12px;
     text-align: left;
     font-family: 'Geograph';
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 6; 
+    line-clamp: 6; 
+   -webkit-box-orient: vertical;
 }
 
 
@@ -146,14 +176,14 @@
     background: black;
     border: none;
     border-bottom: 1px solid #000;
-    border-radius: 2px;
+    border-radius: 0px;
     color: white;
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-body-bold);
     line-height: 1;
     padding: 18.5px 40px 18.5px 0;
     width: 60%;
-    font-family: 'Founders Grotesk';
+    font-family: 'Labil Grotesk Regular';
 }
 
 .react-tag-input {
@@ -171,7 +201,7 @@
     color: #333;
     border: none;
     border-bottom: 1px solid #e1e1e1;
-    border-radius: 3px;
+    border-radius: 0px;
     margin: 0 auto;
     text-transform: uppercase;
     font-family: 'Founders Grotesk';

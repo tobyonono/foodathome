@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import SingleRelatedRecipe from './SingleRelatedRecipe';
 import '../Sidebar.css';
+import {Loader} from '../icons/svg/svgs.js';
+
 
 
 const RelatedRecipes = ({ recipeID }) => {
@@ -37,7 +39,7 @@ const RelatedRecipes = ({ recipeID }) => {
 
     if (isLoading) {
         return (
-            <div> here dispolay a gif loading </div>
+            <div> <Loader /></div> 
         )
     };
 
