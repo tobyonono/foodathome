@@ -7,7 +7,7 @@ const SingleRead = ({ id, name, author, image, asset, description, twitter, inst
     <li className="relative grid grid-cols-[repeat(12,_1fr)] items-center font-nitti p-3 border font-nitti text-sm uppercase shadow-lg rounded-lg">
         <div className=" relative col-[7_/_-1] row-[1_/_1] text-right">
             <div className=''>
-                <p className="m-2 text-xs text-white ">{author}</p>
+                <p className="my-2 text-xs text-white ">{author}</p>
                 <h3 className="mb-6 text-[bisque] text-2xl relative z-10">{name}</h3>
                 <div className="relative z-10 p-5 bg-white shadow-lg border-8 border-solid border-[bisque]">
                     <p className=" text-black text-left font-guyot normal-case">{description}</p>
@@ -19,9 +19,9 @@ const SingleRead = ({ id, name, author, image, asset, description, twitter, inst
             </div>
         </div>
         <div className="relative col-[1_/_8] row-[1_/_-1]">
-            <a className='' href='http://www.rachelama.com'>
-                <div className='hover:brightness-50 cursor-pointer'>{asset ? asset : <img src={image} />}</div>
-            </a>
+            
+        <div>{asset ? <div className='brightness-50'>{asset} </div> : <a className='hover:brightness-50 cursor-pointer' href='http://www.rachelama.com'><img src={image} /></a>}</div>
+
         </div>
     </li>
 

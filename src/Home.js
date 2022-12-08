@@ -53,7 +53,7 @@ const Home = () => {
 
     return (
         <>
-            <header className="topBar">
+            <header className="topBar font-nitti">
                 <Link to={`/`} className='normal'>
                     <div className='title'>
                         <SectionTitle titleText="Bitter Cassava" />
@@ -61,7 +61,7 @@ const Home = () => {
                     </div>
                 </Link>
 
-                <ReactTagInput tags={ingredients}
+                <ReactTagInput className="font-nitti" tags={ingredients}
                     onChange={onIngredientChange} placeholder="Search Something" />
                 <button className='searchButton hover-search-submit' onClick={getRecipes}><Search2 /></button>
             </header>
