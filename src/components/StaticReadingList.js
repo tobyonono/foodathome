@@ -53,5 +53,44 @@ export const StaticReadingList = [
     
     
   ];
+
+  export const staticVideoList = [
+    {
+      id: 1,
+      name: 'First We Feast',
+      author:'Danielson William',
+      asset:<iframe width="460" height="315" src="https://www.youtube.com/embed/6oWxf0gYFRU?controls=0&mute=1&autoplay=1&loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>,
+      description: 'Just someone named Daniel, wanting to spread vibes through my passions of music, food and cannabis. Not a chef, still enrolled and studying at the YouTube Culinary Institute.',
+      twitter: 'Sincere@april.biz',
+      instagram:'https://www.instagram.com/danielsonwilliams_/?hl=en'
+    },
+    {
+      id: 2,
+      name: '@gelen',
+      author:'Carolina Gelen',
+      asset:<iframe width="460" height="315" src="https://www.youtube.com/embed/k16HJElAt4o?controls=0&mute=1&autoplay=1&vq=large&playlist=k16HJElAt4o&loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>,
+      description: "I’m from Transylvania, Romania and immigrated to the US in 2021 pursuing my passion for cooking.  I’ve worked in five star restaurants and casual cafes but the best experience was growing up in my mothers kitchen.",
+      twitter: 'Sincere@april.biz',
+      instagram:'https://www.instagram.com/danielsonwilliams_/?hl=en'
+    },
+    {
+      id: 3,
+      name: 'Street Food Icons',
+      author:'Munchies',
+      asset:<iframe width="460" height="315" src="https://www.youtube.com/embed/videoseries?controls=0&mute=1&autoplay=1&vq=large&list=PLnPDn1Lb79JFjhC17KjxiFU41SKivZfrW&loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>,
+      description: "We chronicle the global culinary experience with diverse voices that include and come from: chefs and home cooks, makers and consumers, the politics and policies of food, 'front' and 'back of house' restaurant life, old wives' tales, innovative news, and culturally significant indicators in our modern world. ",
+      twitter: 'Sincere@april.biz',
+      instagram:'https://www.instagram.com/danielsonwilliams_/?hl=en'
+    },
+    {
+      id: 3,
+      name: 'Kia Cooks',
+      author:'Kia Damon',
+      asset:<iframe width="460" height="315" src="https://www.youtube.com/embed/4NFoDBd3vgk?controls=0&mute=1&autoplay=1&playlist=4NFoDBd3vgk&loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>,
+      description: "Kia Damon is a self-taught chef and proud Floridan woman. While paving her way through kitchens, she launched The Supper Club From Nowhere as a response to the lack of visible Black women in her culinary community.",
+      twitter: 'Sincere@april.biz',
+      instagram:'https://www.instagram.com/danielsonwilliams_/?hl=en'
+    }      
+    
+  ];
   
-export default StaticReadingList;

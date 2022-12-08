@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const SingleRead = ({ id, name, author, image, description, twitter, instagram }) => (
+const SingleRead = ({ id, name, author, image, asset, description, twitter, instagram }) => (
 
-    <li className="relative grid grid-cols-[repeat(12,_1fr)] items-center font-nitti mb-20 p-3 border font-nitti text-sm uppercase shadow-lg rounded-lg">
+    <li className="relative grid grid-cols-[repeat(12,_1fr)] items-center font-nitti p-3 border font-nitti text-sm uppercase shadow-lg rounded-lg">
         <div className=" relative col-[7_/_-1] row-[1_/_1] text-right">
             <div className=''>
                 <p className="m-2 text-xs text-white ">{author}</p>
@@ -20,7 +20,7 @@ const SingleRead = ({ id, name, author, image, description, twitter, instagram }
         </div>
         <div className="relative col-[1_/_8] row-[1_/_-1]">
             <a className='' href='http://www.rachelama.com'>
-                <div className='hover:brightness-50 cursor-pointer'><img src={image} /></div>
+                <div className='hover:brightness-50 cursor-pointer'>{asset ? asset : <img src={image} />}</div>
             </a>
         </div>
     </li>
