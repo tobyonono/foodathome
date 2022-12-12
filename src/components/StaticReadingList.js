@@ -83,12 +83,21 @@ export const StaticReadingList = [
       instagram:'https://www.instagram.com/danielsonwilliams_/?hl=en'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Kia Cooks',
       author:'Kia Damon',
       asset:<iframe width="460" height="315" src="https://www.youtube.com/embed/4NFoDBd3vgk?controls=0&mute=1&autoplay=1&playlist=4NFoDBd3vgk&loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>,
       description: "Kia Damon is a self-taught chef and proud Floridan woman. While paving her way through kitchens, she launched The Supper Club From Nowhere as a response to the lack of visible Black women in her culinary community.",
       twitter: 'Sincere@april.biz',
+      instagram:'https://www.instagram.com/danielsonwilliams_/?hl=en'
+    },
+    {
+      id: 5,
+      name: 'Sunday Sessions',
+      author:'Big Has',
+      asset:<iframe width="460" height="315" src="https://www.youtube.com/embed/eUP_IDzEq-Y?controls=0&mute=1&autoplay=1&playlist=eUP_IDzEq-Y&loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>,
+      description: "Hello and welcome to Sunday sessions. Here it’s all about no bullshit good food. Whether that’s dishes that remind us of sunshine in the cold or a good old steak and salsa verde. \n \n We’re not here to win awards or cook food you can’t make at home. It’s all about sharing recipes and catching a vibe. Bless up.",
+      twitter: '@bighas',
       instagram:'https://www.instagram.com/danielsonwilliams_/?hl=en'
     }      
     
