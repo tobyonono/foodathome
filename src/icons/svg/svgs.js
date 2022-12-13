@@ -16,33 +16,33 @@ export const WhatsApp = () => (
 )
 
 export const Twitter = () => (
-    <svg className='fill-white'role="img" viewBox="0 0 24 24" width='16' height='16' xmlns="http://www.w3.org/2000/svg">
+    <svg role="img" viewBox="0 0 24 24" width='16' height='16' xmlns="http://www.w3.org/2000/svg">
         <title>Twitter</title>
         <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
     </svg>
 )
 
 export const Search = () => (
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height='24' width='24' fill='white'><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height='24' width='24' fill='white'><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" /></svg>
 )
 
 export const Search2 = () => (
-<svg className="icon-search" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-816.000000, -36.000000)" stroke="#2b2b2b"><g transform="translate(817.000000, 37.000000)"><g transform="translate(0.360000, 0.000000)"><circle stroke-width="2" cx="7.5" cy="7.5" r="7.5"></circle><line x1="12.7618408" y1="12.7618408" x2="17.7115883" y2="17.7115883" stroke-width="2"></line></g></g></g></g></svg>    
+    <svg className="icon-search" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-816.000000, -36.000000)" stroke="#2b2b2b"><g transform="translate(817.000000, 37.000000)"><g transform="translate(0.360000, 0.000000)"><circle stroke-width="2" cx="7.5" cy="7.5" r="7.5"></circle><line x1="12.7618408" y1="12.7618408" x2="17.7115883" y2="17.7115883" stroke-width="2"></line></g></g></g></g></svg>
 )
 
 export const Loader = () => (
-<svg x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" fill="#fff">
-                <defs>
-                    <path
-                        id="circlePath"
-                        d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                    ></path>
-                </defs>
-                <circle cx="100" cy="100" r="50" fill="none" stroke="none"></circle>
-                <g>
-                    <use xlinkHref="#circlePath" fill="none"></use>
-                    <text fill="red" stroke="#fff">
-                        <textPath xlinkHref="#circlePath" fill="#fff">• BITTER • CASSAVA</textPath>
-                    </text>
-                </g>
-            </svg>    )
+    <svg x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" fill="#fff">
+        <defs>
+            <path
+                id="circlePath"
+                d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+            ></path>
+        </defs>
+        <circle cx="100" cy="100" r="50" fill="none" stroke="none"></circle>
+        <g>
+            <use xlinkHref="#circlePath" fill="none"></use>
+            <text fill="red" stroke="#fff">
+                <textPath xlinkHref="#circlePath" fill="#fff">• BITTER • CASSAVA</textPath>
+            </text>
+        </g>
+    </svg>)

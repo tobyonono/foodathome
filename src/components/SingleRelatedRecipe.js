@@ -8,8 +8,8 @@ const SingleRelatedRecipe = ({ id, title, image, author }) => {
 
     return (
         <li key={id} id={id}>
-            <div className="sideBarWrapper">
-                <div className='recipeContent'>
+            <div className=" flex py-8 border-b border-[rgba(0,0,0,.1)]">
+                <div className='flex-grow pr-4'>
                     <h5></h5>
                     <Link to={`/recipes/${id}/${title}`} >
                         <h4 className='sideBarRecipeTitle'><strong>{title} Recipe</strong></h4>
@@ -17,8 +17,8 @@ const SingleRelatedRecipe = ({ id, title, image, author }) => {
                     <p className="category">{author}</p>
                     <p className="category">23-12-99</p>
                 </div>
-                <div className="sideBarImage">
-                    <img src={image} alt="recipe" />
+                <div className="max-w-[70px]">
+                    <img className='aspect-square object-cover' src={image} alt="recipe" />
                 </div>
             </div>
         </li >

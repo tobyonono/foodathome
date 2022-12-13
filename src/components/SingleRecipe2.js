@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const SingleRecipe = ({ id, title, image, recipeDescription, author }) => (
 
-    <article className="w-full p-3 border font-nitti text-sm uppercase shadow-lg rounded-lg hover:bg-[#ffe4c4d3]" key={id}>
+    <article className="w-full p-3 border font-nitti text-sm uppercase shadow-lg rounded-lg hover:bg-[#ffe4c4d3]" key={id} id={id}>
         <div className="relative p-2 pb-4 border border-[bisque] bg-black h-full">
             <div className="hover:brightness-50 cursor-pointer">
                 <img className='aspect-square object-cover' src={image} />

@@ -5,14 +5,14 @@ import '../Recipe.css';
 const RecipeList = ({ recipes }) => {
     //const [id, title, image, missedIngredients] = recipes;
     const recipeCard = recipes.map((recipe, i) => {
-        return <SingleRecipe2 key={recipe.id} id={recipe.id} title={recipe.name} image={recipe.thumbnail_url}
+        return <SingleRecipe2 key={i} id={i} title={recipe.name} image={recipe.thumbnail_url}
             recipeDescription={recipe.description} author={recipe.show.name} />
     });
 
 
     return (
         <div>
-            <ul className='grid grid-cols-3 gap-8 p-4'>
+            <ul className='grid gird-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 p-20 lg:p-4'>
                 {recipeCard}
             </ul>
         </div>
