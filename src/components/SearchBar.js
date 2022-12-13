@@ -32,9 +32,9 @@ const SearchBar = ({ ingredients, setIngredients, setData }) => {
 
     return (
         <>
-            <ReactTagInput className="font-nitti flex" tags={ingredients}
+            <ReactTagInput className="font-nitti" tags={ingredients}
                 onChange={onIngredientChange} placeholder="Search Something" />
-            <Link to={`/search/${ingredients}`} onClick={getRecipes}><button className='searchButton hover-search-submit' ><Search2 /></button></Link>
+            <Link className="flex" to={`/search/${ingredients}`} onClick={getRecipes}><button className='searchButton hover-search-submit' ><Search2 /></button></Link>
         </>
     )
 }
