@@ -20,7 +20,7 @@ const SingleRead = ({ id, name, author, image, asset, description, twitter, inst
         </div>
         <div className="relative col-[1_/_8] row-[1_/_-1]">
             
-        <div>{asset ? <div className='brightness-50'>{asset} </div> : <a className='hover:brightness-50 cursor-pointer' href={website}><img src={image} /></a>}</div>
+        <div>{asset ? <div className='brightness-50'>{asset} </div> : <a className='hover:brightness-50 cursor-pointer ' href={website}><img className='w-auto max-h-[300px]' src={image} /></a>}</div>
 
         </div>
     </li>

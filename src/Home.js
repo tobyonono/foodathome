@@ -8,20 +8,26 @@ import RecipeList from './components/RecipeList';
 import SubmitButton from './components/SubmitButton';
 import RecipePage from './RecipePage';
 import ReadingList from './components/ReadingList';
-import {StaticReadingList, staticVideoList} from './components/StaticReadingList';
+import { StaticReadingList, staticVideoList } from './components/StaticReadingList';
 import { Link } from "react-router-dom";
 import { Search } from './icons/svg/svgs.js';
 import { Search2 } from './icons/svg/svgs.js';
 import { Loader } from './icons/svg/svgs.js';
 import SearchBar from './components/SearchBar';
+import DictionaryDefinition from './components/Dictionary/DictionaryDefinition';
+const searchTermExamples =['nutmeg', 'braise','cassava', 'ginger', 'mango', 'cardamom', 'roast', 'flour','skillet', 'yam', 'fry', 'carve', 'deseed'];
+const randomSearch = searchTermExamples[Math.floor(Math.random()*searchTermExamples.length)];
 
 
+const Home = ({ data, setData, ingredients, setIngredients, setDictionarySearch, dictionarySearch }) => {
 
-const Home = ({data,setData, ingredients, setIngredients}) => {
- 
     const [loading, setLoading] = useState(true);
+    
 
     
+        //const randomSearch = searchTermExamples[Math.floor(Math.random()*searchTermExamples.length)];
+        //console.log(randomSearch);
+
 
     return (
         <>
@@ -33,17 +39,24 @@ const Home = ({data,setData, ingredients, setIngredients}) => {
                     </div>
                 </Link>
 
-               <SearchBar ingredients={ingredients} setIngredients={setIngredients} setData={setData} />
+                <SearchBar ingredients={ingredients} setIngredients={setIngredients} setData={setData} setDictionarySearch={setDictionarySearch} />
             </header>
-            <section className='pt-20 py-4 border-0 mx-10'>
+            <section className='pt-8 p-4 border-0 mx-10'>
+            <DictionaryDefinition dictionarySearch={randomSearch} />
+                <hr className='w-full my-4' />
+            </section>
+            
+
+            
+            <section className='pt-8 py-4 border-0 mx-10'>
                 <div className="flex p-4">
                     <span className="text-white font-nitti text-4xl uppercase">Featured Reading</span>
                 </div>
                 <ReadingList staticList={StaticReadingList} />
                 <hr className='w-full m-4' />
             </section>
-            <section className='pt-20 py-4 border-0 mx-10'>
-            <div className="flex p-4">
+            <section className='pt-8 py-4 border-0 mx-10'>
+                <div className="flex p-4">
                     <span className="text-white font-nitti text-4xl uppercase">Featured Video</span>
                 </div>
                 <ReadingList staticList={staticVideoList} />

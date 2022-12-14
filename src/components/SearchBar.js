@@ -4,14 +4,19 @@ import { Search2 } from "../icons/svg/svgs";
 import { Link } from "react-router-dom";
 import { Loader } from "../icons/svg/svgs";
 
-const SearchBar = ({ ingredients, setIngredients, setData }) => {
+const SearchBar = ({ ingredients, setIngredients, setData, setDictionarySearch }) => {
 
-    const onIngredientChange = (newIngredients) => {
-        setIngredients(newIngredients);
+    const onIngredientChange = (newIngredients) => { 
+        console.log(newIngredients[0], newIngredients)  
+            setIngredients(newIngredients);           
     }
 
     const getRecipes = async () => {
-
+        if(ingredients[0] !== 'null')
+        {
+            setDictionarySearch(ingredients[0]);
+            console.log(ingredients[0], ingredients)
+        };  
         const encodedIngredients = encodeURI(ingredients);
         const options = {
             method: 'GET',

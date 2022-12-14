@@ -37,6 +37,13 @@ code {
   url("./fonts/Guyot/GuyotText-Regular.otf")
 }
 
+@font-face{
+  font-family: "Guyot";
+  font-style: italic;
+  src:local("Guyot"),
+  url("./fonts/Guyot/GuyotText-RegularItalic.otf")
+}
+
 
 @font-face{
   font-family: "Helvetica Neue Medium";

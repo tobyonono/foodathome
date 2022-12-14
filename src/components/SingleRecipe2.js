@@ -3,7 +3,7 @@ import '../Recipe.css';
 import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 
-const SingleRecipe = ({ id, title, image, recipeDescription, author }) => (
+const SingleRecipe = ({ id, title, image, recipeDescription, author}) => (
 
     <article className="w-full p-3 border font-nitti text-sm uppercase shadow-lg rounded-lg hover:bg-[#ffe4c4d3]" key={id} id={id}>
         <div className="relative p-2 pb-4 border border-[bisque] bg-black h-full">

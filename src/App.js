@@ -12,13 +12,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   const [data, setData] = useState([]);
   const [ingredients, setIngredients] = useState([]);
+  const [dictionarySearch, setDictionarySearch] = useState(null);
+
+  
   return (
     <div className="App">     
       <Router>
         <Routes>
-          <Route path='/' element={<Home data={data} setData={setData} ingredients={ingredients} setIngredients={setIngredients}/>} />
+          <Route path='/' element={<Home data={data} setData={setData} ingredients={ingredients} setIngredients={setIngredients} setDictionarySearch={setDictionarySearch} dictionarySearch={dictionarySearch}/>} />
           <Route exact path='/search/:ingredients/recipes/:recipeSlug/:id' element={<RecipePage2 data={data} />} />
-          <Route exact path='/search/:ingredients' element={<RecipeResultsPage data={data} setData={setData} ingredients={ingredients} setIngredients={setIngredients}/>} />
+          <Route exact path='/search/:ingredients' element={<RecipeResultsPage data={data} setData={setData} ingredients={ingredients} setIngredients={setIngredients} dictionarySearch={dictionarySearch} setDictionarySearch={setDictionarySearch}/>} />
         </Routes>
       </Router>
 

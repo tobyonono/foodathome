@@ -6,7 +6,6 @@ import '../Sidebar.css';
 import {Loader} from '../icons/svg/svgs.js';
 
 
-
 const RelatedRecipes = ({ recipeID }) => {
 
     const [data, setData] = useState([]);
@@ -31,17 +30,11 @@ const RelatedRecipes = ({ recipeID }) => {
             setData(similarRecipes.data.results);
             setIsLoading(false);
 
-            console.log('Similar Receipes', similarRecipes.data.results);
             console.log(data);
         }
         fetchData().catch(console.error);
     }, []);
 
-    if (isLoading) {
-        return (
-            <div> <Loader /></div> 
-        )
-    };
 
     const relatedRecipeList = data.map((recipe, i) => {
         return <SingleRelatedRecipe key={recipe.id} id={recipe.id} title={recipe.name} image={recipe.thumbnail_url}
